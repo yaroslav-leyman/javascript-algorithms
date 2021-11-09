@@ -7,7 +7,14 @@
 */
 
 function capitalize(str) {
-    // Напишите код здесь
+  if (!str.trim()) return '';
+
+  const wordArray = str.trim().split(' ');
+  const capitalizedWordArray = wordArray.map(function (item) {
+    return item[0].toUpperCase() + item.slice(1);
+  });
+
+  return capitalizedWordArray.join(' ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
